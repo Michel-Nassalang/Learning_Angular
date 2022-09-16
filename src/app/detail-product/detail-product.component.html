@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row justify-content-center align-items-start d-flex mt-5">
+        <div class="col-10 col-sm-6 my-5">
+            <div class="img-fluid">
+                <img src="../../assets/images/{{product.id%2 +1}}.jpg" alt="" class="img-fluid h-25">
+            </div>
+        </div>
+        <div class="col-10 col-sm-6 px-5 mt-5">
+            <div class="desc">
+                <h4 class="mx-3">{{product.title}}</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque ullam fugit eaque! Praesentium ipsa explicabo sapiente nobis, quo atque dolorum non at enim doloremque libero in molestiae dignissimos doloribus quis.</p>
+                <div class="row">
+                    <div class="col-6 px-2"><h6><span class="text-primary">Quantité: </span> {{product.quantity}}</h6></div>
+                    <div class="col-6 px-2"><h6><span class="text-primary">Notation: </span> {{product.notation}}</h6></div>
+                </div>
+                <div class="row justify-content-justify align-items-center d-flex">
+                    <h6><span class="text-primary">Prix: </span> {{product.price}}</h6>
+                </div>
+                <button class="btn btn-primary" (click)="note(product)">J'aime</button>
+                <button [disabled]="product.quantity==0" class="btn btn-secondary mx-2" (click)="achat(product)">Acheter</button>
+            </div>
+        </div>
+    </div>
+</div>

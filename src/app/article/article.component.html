@@ -1,0 +1,32 @@
+<div class="container justify-content-center align-items-center d-flex">
+    <h2>{{typeArticle}}</h2>
+</div>
+<div class="row">
+    <div class="col-10 col-sm-12">
+        <table class="table">
+        <thead>
+            <tr>
+                <td>Produit</td>
+                <td>Quantité</td>
+                <td>Notation</td>
+                <td>Prix</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text" class="form-control" placeholder="Produit" [(ngModel)]="title" value="{{title}}" ></td>
+                <td><input type="number" class="form-control" placeholder="Quantité" [(ngModel)]="quantity" value="{{quantity}}"></td>
+                <td><input type="number" class="form-control" placeholder="Notation" [(ngModel)]="notation" value="{{notation}}" ></td>
+                <td><input type="number" class="form-control" placeholder="Prix"  [(ngModel)]="price" value="{{price}}" ></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="container justify-content-center align-items-center d-flex">
+        <button (click)="envoyer()"  [ngClass]="btn">Envoyer</button>
+    </div>
+    <div class="container justify-content-center align-items-center d-flex">
+        <p [hidden]="erInsert" class="card-text">Votre ajout de produit n'a pas réussi. Merci de réessayer s'il vous plait.</p>
+        <p>{{stock}}</p>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+{
+  "produits": [
+    {
+      "id": 1,
+      "title": "Bic",
+      "quantity": 12,
+      "notation": 6,
+      "price": 100
+    },
+    {
+      "id": 2,
+      "title": "Sac à dos",
+      "quantity": 6,
+      "notation": 11,
+      "price": 8000
+    },
+    {
+      "id": 3,
+      "title": "Cahier",
+      "quantity": 11,
+      "notation": 3,
+      "price": 3500
+    },
+    {
+      "id": 4,
+      "title": "Trousseau",
+      "quantity": 5,
+      "notation": 26,
+      "price": 500
+    },
+    {
+      "id": 5,
+      "title": "Crayon couleur",
+      "quantity": 0,
+      "notation": 13,
+      "price": 100
+    },
+    {
+      "id": 6,
+      "title": "Sac en cuir",
+      "quantity": 11,
+      "notation": 10,
+      "price": 9500
+    }
+  ]
+}

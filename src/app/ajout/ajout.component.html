@@ -1,0 +1,57 @@
+<div class="container justify-content-center">
+  <div class="row justify-content-center align-items-center d-flex mt-5">
+    <div class="col-12 clo-sm-8 col-lg-6 mt-5">
+      <form class="form" #f="ngForm" (ngSubmit)="insert(f)">
+        <div class="form-group mb-2">
+          <label for="title">Nom du produit</label>
+          <input type="text" name="title" id="title" class="form-control" ngModel required #t="ngModel">
+          <div class="alert alert-danger mt-2" *ngIf="t.invalid && t.touched">
+            Erreur dans le nom
+          </div>
+        </div>
+        <div class="form-group mb-2">
+          <label for="quantity">Quantité</label>
+          <input type="number" name="quantity" id="quantity" class="form-control" ngModel required #q="ngModel">
+          <div class="alert alert-danger mt-2" *ngIf="q.invalid && q.touched">
+            Erreur dans la quantité
+          </div>
+        </div>
+        <div class="form-group mb-2">
+          <label for="notation">Notation</label>
+          <input type="number" id="notation" name="notation" class="form-control" ngModel required #n="ngModel">
+          <div class="alert alert-danger mt-2" *ngIf="n.invalid && n.touched">
+            Erreur dans la notation
+          </div>
+        </div>
+        <div class="form-group mb-2">
+          <label for="price">Prix</label>
+          <input type="number" id="price" name="price" class="form-control" ngModel required #p="ngModel" >
+          <div class="alert alert-danger mt-2" *ngIf="p.invalid && p.touched">
+            Erreur dans le prix
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary my-3 align-self-center" [disabled]="f.invalid">Ajouter</button>
+      </form>
+    </div>
+    <div class="col-12 col-sm-10 col-lg-8 mt-5">
+      <form class="form" #form="ngForm" (ngSubmit)="save()">
+        <div class="form-group mb-2">
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" class="form-control" pattern="[a-zA-z0-9]+@[a-z]+.[a-z]{2,4}" placeholder=""ngModel required #e="ngModel">
+          <div class="alert alert-danger mt-2" *ngIf="e.invalid && e.touched">
+            <p *ngIf="e.errors?.['pattern']">Votre email est invalide selon le format d'un email</p>
+            <p *ngIf="e.errors?.['required']">Votre champ email est vide</p>
+          </div>
+        </div>
+        <div class="form-group mb-2">
+          <label for="pass"> Password</label>
+          <input type="password" name="pass" id="pass" class="form-control" ngModel required #pa="ngModel">
+          <div class="alert alert-danger mt-2" *ngIf="pa.invalid && pa.touched">
+            Erreur dans le mot de passe
+          </div>
+        </div>
+        <button type="submit" [ngClass]="typeButton" [disabled]="form.invalid">Se connecter</button>
+      </form>
+    </div>
+  </div>
+</div>
